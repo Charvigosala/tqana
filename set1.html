@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body{display:flex;justify-content:center;align-items:center;height:100vh}
+</style>
+</head>
+<body>
+
+
+<form onsubmit="return check()">
+<h3>Registration Form</h3>
+
+  Username: <input id="u" required><br><br>
+
+  Password: <input id="p1" type="password" required><br><br>
+
+  Confirm Password: <input id="p2" type="password" required><br><br>
+
+  <p id="msg" style="color:red"></p>
+
+  <button type="submit">Register</button>
+</form>
+
+<script>
+function check() {
+  if (p1.value !== p2.value) {
+    msg.textContent = "Passwords do not match";
+    return false; // stop form submit
+  }
+}
+</script>
+
+</body>
+</html>
